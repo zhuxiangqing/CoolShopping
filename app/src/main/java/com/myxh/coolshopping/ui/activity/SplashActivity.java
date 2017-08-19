@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.widget.RecyclerView;
 
 import com.myxh.coolshopping.R;
 import com.myxh.coolshopping.common.LocationService;
@@ -24,7 +28,6 @@ public class SplashActivity extends BaseActivity {
 
         //开启定位服务
         startService(new Intent(this, LocationService.class));
-
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {

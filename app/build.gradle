@@ -1,16 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 26
+    buildToolsVersion '26.0.1'
 
     /**兼容Android6.0系统所需，如果这句话报错，可在dependencies标签下使用compile 'cn.bmob.android:http-legacy:1.0'**/
+//    HttpCLient用用到
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
         applicationId "com.myxh.coolshopping"
         minSdkVersion 17
-        targetSdkVersion 24
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
 
@@ -27,9 +28,9 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.yolanda.nohttp:nohttp:1.0.5'
-    compile 'com.android.support:design:24.2.0'
+    compile 'com.android.support:design:26.0.0-alpha1'
     //    compile 'com.google.code.gson:gson:2.7'
     compile 'com.facebook.fresco:fresco:0.13.0'
     compile 'cn.yipianfengye.android:zxing-library:1.8'
@@ -57,5 +58,4 @@ dependencies {
     //热修复
     compile 'com.alipay.euler:andfix:0.5.0@aar'
     compile files('libs/BmobPay_v3.0.3_160621.jar')
-    compile files('libs/weiboSDKCore_3.1.2.jar')
 }

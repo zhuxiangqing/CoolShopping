@@ -7,6 +7,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -134,7 +136,6 @@ public class HomeFragment extends BaseFragment implements HttpListener<String> {
         View titleView = view.findViewById(R.id.home_titlebar);
         initTitlebar(titleView);
         mRefreshListView = (PullToRefreshListView) view.findViewById(R.id.home_pull_to_refresh_listView);
-
 
         //header头部
         View headView = LayoutInflater.from(getActivity()).inflate(R.layout.home_head_page,null);
